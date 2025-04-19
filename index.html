@@ -12,51 +12,51 @@
 <body>
 
   <main>
-      <article>
-        <h1>Contact Us</h1>
+      <article class="card">
+        <h1 class="title">Contact Us</h1>
 
-        <form>
-          <div>
-            <label for="first-name">First Name</label>
-            <input type="text" id="first-name" name="first-name" required>
+        <form class="form" action="#" method="POST">
+          <div class="form_group">
+            <label for="first-name" class="form_label">First Name</label>
+            <input type="text" id="first-name" name="first-name" class="form_input" required>
             <span class="error-message">This field is required</span>
           </div>
-          <div>
-            <label for="last-name">Last Name</label>
-            <input type="text" id="last-name" name="last-name" required>
+          <div class="form_group">
+            <label for="last-name" class="form_label">Last Name</label>
+            <input type="text" id="last-name" name="last-name" class="form_input" required>
             <span class="error-message">This field is required</span>
           </div>
-          <div>
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" required>
+          <div class="form_group">
+            <label for="email" class="form_label">Email Address</label>
+            <input type="email" id="email" name="email" class="form_input" required>
             <span class="error-message">Please enter a valid email address</span>
             <span class="error-message">This field is required</span>
           </div>
-          <div>
-            <fieldset>
-              <legend>Query Type</legend>
-              <label for="general-query">General Enquiry</label>
-              <input type="radio" name="query" id="general-query" value="General Enquiry" required>
-              <label for="support-query">Support Request</label>
-              <input type="radio" name="query" id="support-query" value="Support Request">
+          <div class="form_group">
+            <fieldset class="form_fieldset">
+              <legend class="form_legend">Query Type</legend>
+              <label for="general-query" class="form_label">General Enquiry</label>
+              <input type="radio" name="query" id="general-query" value="General Enquiry" class="form_radio" required>
+              <label for="support-query" class="form_label">Support Request</label>
+              <input type="radio" name="query" id="support-query" value="Support Request" class="form_radio">
             </fieldset>
             <span class="error-message">Please select a query type</span>
           </div>
-          <div>
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
+          <div class="form_group">
+            <label for="message" class="form_label">Message</label>
+            <textarea id="message" name="message" rows="4" required class="form_textarea"></textarea>
             <span class="error-message">This field is required</span>
           </div>
-          <div>
-            <label for="consent">
-              <input type="checkbox" id="consent" name="consent" required>
+          <div class="form_group">
+            <label for="consent" class="form_label">
+              <input type="checkbox" id="consent" name="consent" class="form_checkbox" required>
               I consent to being contacted by the team
             </label>
             <span class="error-message">To submit this form, please consent to being contacted</span>
           </div>
 
-          <button type="submit">Submit</button>
-          
+          <button type="submit" class="form_button">Submit</button>
+
           <div class="success-message">
             <p>Message Sent!</p>
             <p>Thanks for completing the form. We'll be in touch soon!</p>
