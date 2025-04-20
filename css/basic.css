@@ -1,3 +1,28 @@
+:root {
+    --white: #FFFFFF;
+    --grey-900: #2A4144;
+    --grey-500: #86A2A5;
+    --green-600: #0C7D69;
+    --green-200: #E0F1E8;
+    --red: #D73C3C;
+    --font-family: 'Karla', sans-serif;
+    --font-weight-bold: 700;
+    --font-size-title: 2rem;
+    --font-size-text-md: 1.125rem;
+    --font-size-text-sm: 1rem;
+    --line-height-title: 2rem;
+    --line-height-text-md: 1.6875rem;
+    --line-height-text-sm: 1.5rem;
+    --letter-spacing-title: -0.0625rem;
+    --spacing-100: 0.5rem;
+    --spacing-150: 0.75rem;
+    --spacing-200: 1rem;
+    --spacing-300: 1.5rem;
+    --spacing-400: 2rem;
+    --spacing-500: 2.5rem;
+    --spacing-1600: 8rem;
+}
+
 html {
     box-sizing: border-box;
 }
