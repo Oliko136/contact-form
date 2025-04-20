@@ -23,6 +23,18 @@
     --spacing-1600: 8rem;
 }
 
+@font-face {
+    font-family: var(--font-family);
+    src: url(../assets/fonts/static/Karla-Regular.ttf) format('truetype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: var(--font-family);
+    src: url(../assets/fonts/static/Karla-Bold.ttf) format('truetype');
+    font-weight: var(--font-weight-bold);
+}
+
 html {
     box-sizing: border-box;
 }
