@@ -59,6 +59,21 @@
     border: 1px solid var(--grey-500);
 }
 
+.form_button {
+    padding: var(--spacing-200) var(--spacing-500);
+    border-radius: 0.5rem;
+    border-color: transparent;
+    font-weight: var(--font-weight-bold);
+    color: var(--white);
+    background-color: var(--green-600);
+}
+
+.form_button:hover,
+.form_button:focus,
+.form_button:active {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), var(--color-green-600, #0C7D69);
+}
+
 .error-message {
     font-size: var(--font-size-text-sm);
     line-height: var(--line-height-text-sm);
