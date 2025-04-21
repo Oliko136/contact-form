@@ -11,6 +11,58 @@
     background-color: var(--white);
 }
 
+.title {
+    font-size: var(--font-size-title);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-title);
+    letter-spacing: var(--letter-spacing-title);
+    color: var(--grey-900);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-500);
+}
+
+.form_fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-300);
+    border: none;
+}
+
+.form_group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-100);
+}
+
+.form_label {
+    font-size: var(--font-size-text-sm);
+    line-height: var(--line-height-text-sm);
+}
+
+.form_label::after {
+    content: '*';
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    margin-left: var(--spacing-100);
+    color: var(--green-600);
+}
+
+.form_input,
+.form_textarea {
+    padding: var(--spacing-150) var(--spacing-300);
+    border-radius: 0.5rem;
+    border: 1px solid var(--grey-500);
+}
+
+.is-hidden {
+    display: none;
+}
+
 @media screen and (min-width: 768px) {
     .card {
         width: 43.125rem;
