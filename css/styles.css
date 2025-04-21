@@ -1,6 +1,7 @@
 @import './basic.css';
 
 .card {
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: var(--spacing-400);
@@ -80,6 +81,41 @@
     color: var(--red); 
 }
 
+.success {
+    position: absolute;
+    top: -0.5rem;
+    left: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-100);
+    width: 20.4rem;
+    padding: var(--spacing-300);
+    color: var(--green-200);
+    border-radius: var(--spacing-150);
+    background-color: var(--grey-900);
+}
+
+.success_header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-100);
+}
+
+.success_icon {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.success_title {
+    font-weight: var(--font-weight-bold);
+    color: var(--white);
+}
+
+.success_text {
+    font-size: var(--font-size-text-sm);
+    line-height: var(--line-height-text-sm);
+}
+
 .is-hidden {
     display: none;
 }
@@ -90,8 +126,15 @@
         padding: var(--spacing-500);
         margin: var(--spacing-1600) auto;
     }
-    
-}
+
+    .success {
+        top: -11%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 28.1rem;
+    }
+        
+    }
 
 @media screen and (min-width: 1440px) {
     .card {
