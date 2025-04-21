@@ -1,1 +1,28 @@
 @import './basic.css';
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-400);
+    width: 21.4rem;
+    padding: var(--spacing-300);
+    margin: var(--spacing-400) auto;
+    border-radius: var(--spacing-200);
+    background-color: var(--white);
+}
+
+@media screen and (min-width: 768px) {
+    .card {
+        width: 43.125rem;
+        padding: var(--spacing-500);
+        margin: var(--spacing-1600) auto;
+    }
+    
+}
+
+@media screen and (min-width: 1440px) {
+    .card {
+        width: 46rem;
+    }
+    
+}
