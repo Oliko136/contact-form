@@ -60,6 +60,40 @@
     border: 1px solid var(--grey-500);
 }
 
+.checkbox {
+    position: relative;
+    display: flex;
+    padding-left: var(--spacing-500);
+    cursor: pointer;
+}
+
+.form_checkbox {
+    appearance: none;
+    cursor: pointer;
+}
+
+.form_checkbox::before {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+
+    content: '';
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 0.25rem;
+    border: 2px solid var(--grey-500);
+}
+
+.form_checkbox:checked::before {
+    border: none;
+    background-image: url('../assets/images/icon-checkbox-check.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
 .form_button {
     padding: var(--spacing-200) var(--spacing-500);
     border-radius: 0.5rem;
