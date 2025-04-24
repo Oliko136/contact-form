@@ -37,10 +37,16 @@
             <div class="form_group">
               <fieldset class="radio">
                 <legend class="radio_legend">Query Type</legend>
-                <label for="general-query" class="form_label">General Enquiry</label>
-                <input type="radio" name="query" id="general-query" value="General Enquiry" class="form_radio" required>
-                <label for="support-query" class="form_label">Support Request</label>
-                <input type="radio" name="query" id="support-query" value="Support Request" class="form_radio">
+                <div class="radio_group">
+                  <div class="radio_item">
+                    <input type="radio" name="query" id="general-query" value="General Enquiry" class="radio_input" required>
+                    <label for="general-query" class="radio_label">General Enquiry</label>
+                  </div>
+                  <div class="radio_item">
+                    <input type="radio" name="query" id="support-query" value="Support Request" class="radio_input" required>
+                    <label for="support-query" class="radio_label">Support Request</label>
+                  </div>
+                </div>
               </fieldset>
               <span class="error-message is-hidden">Please select a query type</span>
             </div>

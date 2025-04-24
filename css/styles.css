@@ -39,12 +39,14 @@
     gap: var(--spacing-100);
 }
 
-.form_label {
+.form_label,
+.radio_legend {
     font-size: var(--font-size-text-sm);
     line-height: var(--line-height-text-sm);
 }
 
-.form_label::after {
+.form_label::after,
+.radio_legend::after {
     content: '*';
     display: inline-block;
     width: 7px;
@@ -60,10 +62,72 @@
     border: 1px solid var(--grey-500);
 }
 
+.radio {
+    display: flex;
+    flex-direction: column;
+    border: none;
+}
+
+.radio_legend {
+    margin-bottom: var(--spacing-200);
+}
+
+.radio_group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-200);
+}
+
+.radio_item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: var(--spacing-150) var(--spacing-300);
+    border-radius: 0.5rem;
+    border: 1px solid var(--grey-500);
+    cursor: pointer;
+}
+
+.radio_label {
+    padding-left: 2.25rem;
+    cursor: pointer;
+}
+
+.radio_input {
+    appearance: none;
+    cursor: pointer;
+}
+
+.radio_input::before {
+    position: absolute;
+    top: 50%;
+    left: var(--spacing-300);
+    transform: translateY(-50%);
+
+    content: '';
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    border: 2px solid var(--grey-500);
+}
+
+.radio_input:checked::before {
+    border: none;
+    background-image: url('../assets/images/icon-radio-selected.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
 .checkbox {
     position: relative;
     display: flex;
     padding-left: var(--spacing-500);
+    cursor: pointer;
+}
+
+.checkbox label {
     cursor: pointer;
 }
 
