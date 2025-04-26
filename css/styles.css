@@ -45,9 +45,7 @@
     line-height: var(--line-height-text-sm);
 }
 
-.form_label::after,
-.radio_legend::after {
-    content: '*';
+.asterisk {
     display: inline-block;
     width: 7px;
     height: 7px;

@@ -19,24 +19,24 @@
         <form class="form" action="#" method="POST">
           <fieldset class="form_fieldset">
             <div class="form_group">
-              <label for="first-name" class="form_label">First Name</label>
+              <label for="first-name" class="form_label">First Name <span class="asterisk">*</span></label>
               <input type="text" id="first-name" name="first-name" autocomplete="given-name" class="form_input" required>
               <span class="error-message is-hidden">First name is required</span>
             </div>
             <div class="form_group">
-              <label for="last-name" class="form_label">Last Name</label>
+              <label for="last-name" class="form_label">Last Name <span class="asterisk">*</span></label>
               <input type="text" id="last-name" name="last-name" autocomplete="family-name" class="form_input" required>
-              <span class="error-message is-hidden">Last name is required</span>
+              <span class="error-message is-hidden">Last name is required </span>
             </div>
             <div class="form_group">
-              <label for="email" class="form_label">Email Address</label>
+              <label for="email" class="form_label">Email Address <span class="asterisk">*</span></label>
               <input type="email" id="email" name="email" autocomplete="email" class="form_input" required>
               <span class="error-message is-hidden">Please enter a valid email address</span>
               <span class="error-message is-hidden">Email address is required</span>
             </div>
             <div class="form_group">
               <fieldset class="radio">
-                <legend class="radio_legend">Query Type</legend>
+                <legend class="radio_legend">Query Type <span class="asterisk">*</span></legend>
                 <div class="radio_group">
                   <div class="radio_item">
                     <input type="radio" name="query" id="general-query" value="General Enquiry" class="radio_input" required>
@@ -51,7 +51,7 @@
               <span class="error-message is-hidden">Please select a query type</span>
             </div>
             <div class="form_group">
-              <label for="message" class="form_label">Message</label>
+              <label for="message" class="form_label">Message <span class="asterisk">*</span></label>
               <textarea id="message" name="message" rows="8" required class="form_textarea"></textarea>
               <span class="error-message is-hidden">Message is required</span>
             </div>
@@ -59,7 +59,7 @@
           
           <div class="form_group">
             <div class="checkbox">
-              <label for="consent" class="form_label">I consent to being contacted by the team</label>
+              <label for="consent" class="form_label">I consent to being contacted by the team <span class="asterisk">*</span></label>
               <input type="checkbox" id="consent" name="consent" class="form_checkbox" required>
             </div>
             <span class="error-message is-hidden">To submit this form, please consent to being contacted</span>
