@@ -33,6 +33,12 @@
     border: none;
 }
 
+.form_name-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-300);
+}
+
 .form_group {
     display: flex;
     flex-direction: column;
@@ -223,6 +229,24 @@
         margin: var(--spacing-1600) auto;
     }
 
+    .form_name-group {
+        flex-direction: row;
+        gap: var(--spacing-200);
+    }
+
+    .form_name-group .form_group {
+        flex-grow: 1;
+    }
+
+    .radio_group {
+        flex-direction: row;
+        gap: var(--spacing-200);
+    }
+
+    .radio_item {
+        flex-grow: 1;
+    }
+
     .success {
         top: -11%;
         left: 50%;
@@ -230,7 +254,7 @@
         width: 28.1rem;
     }
         
-    }
+}
 
 @media screen and (min-width: 1440px) {
     .card {
