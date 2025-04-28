@@ -6,6 +6,7 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="css/styles.css">
+  <script defer src="./index.js"></script>
   
   <title>Frontend Mentor | Contact form</title>
 
@@ -16,18 +17,18 @@
       <article class="card">
         <h1 class="title">Contact Us</h1>
 
-        <form class="form" action="#" method="POST">
+        <form class="form" id="form-js" action="#" method="POST" novalidate>
           <fieldset class="form_fieldset">
             <div class="form_name-group">
               <div class="form_group">
                 <label for="first-name" class="form_label">First Name <span class="asterisk">*</span></label>
                 <input type="text" id="first-name" name="first-name" autocomplete="given-name" class="form_input" required>
-                <span class="error-message is-hidden">First name is required</span>
+                <span class="error-message is-hidden" id="error-js">First name is required</span>
               </div>
               <div class="form_group">
                 <label for="last-name" class="form_label">Last Name <span class="asterisk">*</span></label>
                 <input type="text" id="last-name" name="last-name" autocomplete="family-name" class="form_input" required>
-                <span class="error-message is-hidden">Last name is required </span>
+                <span class="error-message is-hidden" id="error-js">Last name is required </span>
               </div>
             </div>
         
@@ -35,7 +36,7 @@
               <label for="email" class="form_label">Email Address <span class="asterisk">*</span></label>
               <input type="email" id="email" name="email" autocomplete="email" class="form_input" required>
               <span class="error-message is-hidden">Please enter a valid email address</span>
-              <span class="error-message is-hidden">Email address is required</span>
+              <span class="error-message is-hidden" id="error-js">Email address is required</span>
             </div>
             <div class="form_group">
               <fieldset class="radio">
@@ -51,12 +52,12 @@
                   </div>
                 </div>
               </fieldset>
-              <span class="error-message is-hidden">Please select a query type</span>
+              <span class="error-message is-hidden" id="error-js">Please select a query type</span>
             </div>
             <div class="form_group">
               <label for="message" class="form_label">Message <span class="asterisk">*</span></label>
               <textarea id="message" name="message" rows="8" required class="form_textarea"></textarea>
-              <span class="error-message is-hidden">Message is required</span>
+              <span class="error-message is-hidden" id="error-js">Message is required</span>
             </div>
           </fieldset>
           
@@ -65,12 +66,12 @@
               <label for="consent" class="form_label">I consent to being contacted by the team <span class="asterisk">*</span></label>
               <input type="checkbox" id="consent" name="consent" class="form_checkbox" required>
             </div>
-            <span class="error-message is-hidden">To submit this form, please consent to being contacted</span>
+            <span class="error-message is-hidden" id="error-js">To submit this form, please consent to being contacted</span>
           </div>
 
           <button type="submit" class="form_button">Submit</button>
 
-          <div class="success is-hidden">
+          <div class="success is-hidden" id="success-js">
             <div class="success_header">
               <img src="./assets/images/icon-success-check.svg" alt="Success Icon" class="success_icon">
               <p class="success_title">Message Sent!</p>
