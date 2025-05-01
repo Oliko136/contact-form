@@ -1,11 +1,5 @@
 const form = document.getElementById('form-js');
 const success = document.getElementById('success-js');
-const firstNameError = document.getElementById('first-name-error-js');
-const lastNameError = document.getElementById('last-name-error-js');
-const emailError = document.getElementById('email-error-js');
-const queryError = document.getElementById('query-error-js');
-const messageError = document.getElementById('message-error-js');
-const consentError = document.getElementById('consent-error-js');
 
 form.addEventListener('submit', handleSubmit);
 
@@ -14,52 +8,47 @@ function handleSubmit (e) {
 
     const formData = new FormData(e.target);
     const data = Object.fromEntries(formData);
-    
-    console.log(data);
+    const elementArr = Object.keys(data);
 
-    validate(data);
+    elementArr.forEach((element) => {
+        const elementValue = data[element];
+        const elementError = document.getElementById(`${element}-error-js`);
+
+        console.log(elementValue);
+        console.log(elementError);
+        console.log(elementError.classList.contains('is-hidden'));
+
+       validate(elementValue)
+            ? renderSuccess()
+            : renderError(elementError);
+    }
+    );
 }
 
-function validate (data) {
-    const { "first-name": firstName, "last-name": lastName, email, query, message, consent } = data;
+function validate(element) {
+    element = element.trim();
 
-    if (!firstName) {  
-        renderError(firstNameError);
-        return;
+    if (element === '') {
+        return false;
     }
 
-    if (!lastName) {  
-        renderError(lastNameError);
-        return;
-    }
-
-    if (!email) {  
-        renderError(emailError);
-        return;
-    }
-
-    if (!query) {  
-        renderError(queryError);
-        return;
-    }
-
-    if (!message) {  
-        renderError(messageError);
-        return;
-    }
-
-    if (!consent) {  
-        renderError(consentError);
-        return;
-    }
-
-    renderSuccess();
+    return true;
 }
 
 function renderError(element) {
     element.classList.remove('is-hidden');
 }
 
+function clearError (element) {
+    element.classList.add('is-hidden');
+}
+
 function renderSuccess () {
     success.classList.remove('is-hidden');
+
+    form.reset();
+
+    setTimeout(() => {
+        success.classList.add('is-hidden');
+    }, 5000);
 }
