@@ -31,7 +31,7 @@ function validateForm(elementArr) {
 
     elementArr.forEach((element) => {
         const [key, value] = element;
-        const error = document.getElementById(`${key}-error-js`);
+        const error = document.getElementById(`${key}-error`);
 
         switch (key) {
             case 'first-name':
@@ -71,7 +71,7 @@ function validateForm(elementArr) {
 }
 
 function checkEmail(value) {
-    const regexError = document.getElementById('regex-error-js');
+    const regexError = document.getElementById('regex-error');
     
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     // Check if the email is valid
