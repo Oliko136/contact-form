@@ -51,12 +51,22 @@
     line-height: var(--line-height-text-sm);
 }
 
-.asterisk {
+.required {
     display: inline-block;
     width: 7px;
     height: 7px;
     margin-left: var(--spacing-100);
     color: var(--green-600);
+}
+
+.sr-only {
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
 }
 
 .form_input,
