@@ -54,8 +54,10 @@ Use this section to recap over some of your major learnings while working throug
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [Inclusive Inputs. How to make inputs more accessible.](https://www.ovl.design/text/inclusive-inputs/) - An incredibly useful article containing advice on how to properly mark required fields, add descriptions and error messages to corresponding inputs.
+- [Indicating form controls as required using asterisks (\*)](https://www.accessibility-developer-guide.com/examples/forms/required/#first-approach-using-aria) - Another super helpful article on how to properly mark required fields to make them accessible.
+- [Usable and Accessible Form Validation and Error Recovery](https://webaim.org/techniques/formvalidation/) - A WebAIM article full of practical instructions on how to build accessible forms and validate them.
+- [Accessibility and Forms](https://web.dev/learn/accessibility/forms) - A great concise article on all the essentials of form accessibility - semantics, labels, fieldsets, autocompletion, descriptions and errors.
 
 ## Author
 
