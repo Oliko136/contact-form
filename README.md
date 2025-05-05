@@ -31,7 +31,10 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./assets/images/form-empty.webp)
+![](./assets/images/form-error.webp)
+![](./assets/images/form-filled.webp)
+![](./assets/images/form-success.webp)
 
 ### Links
 
