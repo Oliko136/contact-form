@@ -1,5 +1,6 @@
 const form = document.getElementById('form-js');
 const success = document.getElementById('success-js');
+const successTmpl = document.getElementById('success-template');
 
 form.addEventListener('submit', handleSubmit);
 
@@ -93,7 +94,10 @@ function clearError(element) {
 }
 
 function renderSuccess() {
-    success.classList.remove('is-hidden');
+    const clone = successTmpl.content.cloneNode(true);
+    clone.querySelector('.success_title').textContent = 'Message Sent!';
+    clone.querySelector('.success_text').textContent = "Thanks for completing the form. We'll be in touch soon!";
+    success.appendChild(clone);
 
     form.reset();
 

@@ -27,16 +27,16 @@
                   <span class="sr-only">required</span>
                 </label>
                 <input type="text" id="first-name" name="first-name" autocomplete="given-name" aria-invalid="true" aria-describedby="first-name-error" class="form_input">
-                <span class="error-message is-hidden" id="first-name-error" aria-live="assertive">First name is required</span>
+                <span class="error-message is-hidden" id="first-name-error">First name is required</span>
               </div>
               <div class="form_group">
                 <label for="last-name" class="form_label">
                   Last Name
                   <span class="required" aria-hidden="true">*</span>
-                  <span class="sr-only">required</span>
+                  <spam class="sr-only">required</span>
                 </label>
                 <input type="text" id="last-name" name="last-name" autocomplete="family-name" aria-invalid="true" aria-describedby="last-name-error" class="form_input">
-                <span class="error-message is-hidden" id="last-name-error" aria-live="assertive">Last name is required </span>
+                <span class="error-message is-hidden" id="last-name-error">Last name is required </span>
               </div>
             </div>
         
@@ -47,8 +47,8 @@
                 <span class="sr-only">required</span>
               </label>
               <input type="email" id="email" name="email" autocomplete="email" aria-invalid="true" aria-describedby="email-error regex-error" class="form_input">
-              <span class="error-message is-hidden" id="regex-error" aria-live="assertive">Please enter a valid email address</span>
-              <span class="error-message is-hidden" id="email-error" aria-live="assertive">Email address is required</span>
+              <span class="error-message is-hidden" id="regex-error">Please enter a valid email address</span>
+              <span class="error-message is-hidden" id="email-error">Email address is required</span>
             </div>
             <div class="form_group">
               <fieldset class="radio">
@@ -68,7 +68,7 @@
                   </div>
                 </div>
               </fieldset>
-              <span class="error-message is-hidden" id="query-error" aria-live="assertive">Please select a query type</span>
+              <span class="error-message is-hidden" id="query-error">Please select a query type</span>
             </div>
             <div class="form_group">
               <label for="message" class="form_label">
@@ -77,7 +77,7 @@
                 <span class="sr-only">required</span>
               </label>
               <textarea id="message" name="message" rows="8" aria-invalid="true" aria-describedby="message-error" class="form_textarea"></textarea>
-              <span class="error-message is-hidden" id="message-error" aria-live="assertive">Message is required</span>
+              <span class="error-message is-hidden" id="message-error">Message is required</span>
             </div>
           </fieldset>
           
@@ -90,21 +90,26 @@
               </label>
               <input type="checkbox" id="consent" name="consent" aria-invalid="true" aria-describedby="consent-error" class="form_checkbox">
             </div>
-            <span class="error-message is-hidden" id="consent-error" aria-live="assertive">To submit this form, please consent to being contacted</span>
+            <span class="error-message is-hidden" id="consent-error">To submit this form, please consent to being contacted</span>
           </div>
 
           <button type="submit" class="form_button">Submit</button>
 
-          <div class="success is-hidden" id="success-js" aria-live="polite">
-            <div class="success_header">
-              <img src="./assets/images/icon-success-check.svg" alt="Success Icon" class="success_icon">
-              <p class="success_title">Message Sent!</p>
-            </div>
-            <p class="success_text">Thanks for completing the form. We'll be in touch soon!</p>
-          </div>
+          <div id="success-js" aria-live="polite" aria-atomic="true"></div>
+            
         </form>
       </article>
   </main>
+
+  <template id="success-template">
+    <div class="success">
+      <div class="success_header">
+        <img src="./assets/images/icon-success-check.svg" alt="" class="success_icon">
+        <p class="success_title"></p>
+      </div>
+      <p class="success_text"></p>
+    </div> 
+  </template>
   
 </body>
 </html>
