@@ -59,16 +59,6 @@
     color: var(--green-600);
 }
 
-.sr-only {
-    clip-path: inset(100%);
-    clip: rect(0 0 0 0);
-    height: 1px;
-    overflow: hidden;
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
-}
-
 .form_input,
 .form_textarea {
     padding: var(--spacing-150) var(--spacing-300);
@@ -248,7 +238,7 @@
 }
 
 .is-hidden {
-    display: none;
+    position: absolute;
 }
 
 @media screen and (min-width: 768px) {

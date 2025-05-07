@@ -25,16 +25,16 @@
                   First Name
                   <span class="required" aria-hidden="true">*</span>
                 </label>
-                <input type="text" id="first-name" name="first-name" autocomplete="given-name" aria-required="true" aria-invalid="true" aria-describedby="first-name-error" class="form_input">
-                <span class="error-message is-hidden" id="first-name-error">First name is required</span>
+                <input type="text" id="first-name" name="first-name" autocomplete="given-name" aria-required="true" aria-invalid="true" aria-errormessage="first-name-error" class="form_input">
+                <span class="error-message is-hidden" id="first-name-error" aria-live="polite"></span>
               </div>
               <div class="form_group">
                 <label for="last-name" class="form_label">
                   Last Name
                   <span class="required" aria-hidden="true">*</span>
                 </label>
-                <input type="text" id="last-name" name="last-name" autocomplete="family-name" aria-required="true" aria-invalid="true" aria-describedby="last-name-error" class="form_input">
-                <span class="error-message is-hidden" id="last-name-error">Last name is required </span>
+                <input type="text" id="last-name" name="last-name" autocomplete="family-name" aria-required="true" aria-invalid="true" aria-errormessage="last-name-error" class="form_input">
+                <span class="error-message is-hidden" id="last-name-error" aria-live="polite"></span>
               </div>
             </div>
         
@@ -43,9 +43,9 @@
                 Email Address
                 <span class="required" aria-hidden="true">*</span> 
               </label>
-              <input type="email" id="email" name="email" autocomplete="email" aria-required="true" aria-invalid="true" aria-describedby="email-error regex-error" class="form_input">
-              <span class="error-message is-hidden" id="regex-error">Please enter a valid email address</span>
-              <span class="error-message is-hidden" id="email-error">Email address is required</span>
+              <input type="email" id="email" name="email" autocomplete="email" aria-required="true" aria-invalid="true" aria-errormessage="email-error regex-error" class="form_input">
+              <span class="error-message is-hidden" id="regex-error" aria-live="polite"></span>
+              <span class="error-message is-hidden" id="email-error" aria-live="polite"></span>
             </div>
             <div class="form_group">
               <fieldset class="radio">
@@ -55,24 +55,24 @@
                 </legend>
                 <div class="radio_group">
                   <div class="radio_item">
-                    <input type="radio" name="query" id="general-query" value="General Enquiry" aria-required="true" aria-invalid="true" aria-describedby="query-error" class="radio_input">
+                    <input type="radio" name="query" id="general-query" value="General Enquiry" aria-required="true" aria-invalid="true" aria-errormessage="query-error" class="radio_input">
                     <label for="general-query" class="radio_label">General Enquiry</label>
                   </div>
                   <div class="radio_item">
-                    <input type="radio" name="query" id="support-query" value="Support Request" aria-required="true" aria-invalid="true" aria-describedby="query-error" class="radio_input">
+                    <input type="radio" name="query" id="support-query" value="Support Request" aria-required="true" aria-invalid="true" aria-errormessage="query-error" class="radio_input">
                     <label for="support-query" class="radio_label">Support Request</label>
                   </div>
                 </div>
               </fieldset>
-              <span class="error-message is-hidden" id="query-error">Please select a query type</span>
+              <span class="error-message is-hidden" id="query-error" aria-live="polite"></span>
             </div>
             <div class="form_group">
               <label for="message" class="form_label">
                 Message
                 <span class="required" aria-hidden="true">*</span>
               </label>
-              <textarea id="message" name="message" rows="8" aria-required="true" aria-invalid="true" aria-describedby="message-error" class="form_textarea"></textarea>
-              <span class="error-message is-hidden" id="message-error">Message is required</span>
+              <textarea id="message" name="message" rows="8" aria-required="true" aria-invalid="true" aria-errormessage="message-error" class="form_textarea"></textarea>
+              <span class="error-message is-hidden" id="message-error" aria-live="polite"></span>
             </div>
           </fieldset>
           
@@ -82,14 +82,14 @@
                 I consent to being contacted by the team
                 <span class="required" aria-hidden="true">*</span>
               </label>
-              <input type="checkbox" id="consent" name="consent" aria-required="true" aria-invalid="true" aria-describedby="consent-error" class="form_checkbox">
+              <input type="checkbox" id="consent" name="consent" aria-required="true" aria-invalid="true" aria-errormessage="consent-error" class="form_checkbox">
             </div>
-            <span class="error-message is-hidden" id="consent-error">To submit this form, please consent to being contacted</span>
+            <span class="error-message is-hidden" id="consent-error" aria-live="polite"></span>
           </div>
 
           <button type="submit" class="form_button">Submit</button>
 
-          <div id="success-js" aria-live="polite" aria-atomic="true"></div>
+          <div class="is-hidden" id="success-js" aria-live="polite"></div>
             
         </form>
       </article>
