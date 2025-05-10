@@ -55,6 +55,10 @@ Users should be able to:
 
 The main purpose of this challenge was to learn how to create accessible forms and accessible validation patterns, such as handling error messages and a success notification.
 
+First of all, I learned that although the FormData object is extremely useful, it omits checkboxes and radio buttons with empty values, posing a huge inconvenience for validation. So, if a form includes required checkboxes and radio buttons, it is better to make a data object manually, the old school way.
+
+Secondly, getting screen readers to announce live regions such as error messages or success notifications was not as easy as it seemed initially. The best option I found was to dynamically insert text as a response to certain condition, rather than showing / hiding the parent element. Also, live regions are not compatible with "display: none", so in order to avoid extra space caused by an empty element (reserved for an error / success message) it is best to assign "position: absolute" to it.
+
 ### Useful resources
 
 - [Inclusive Inputs. How to make inputs more accessible.](https://www.ovl.design/text/inclusive-inputs/) - An incredibly useful article containing advice on how to properly mark required fields, add descriptions and error messages to corresponding inputs.
